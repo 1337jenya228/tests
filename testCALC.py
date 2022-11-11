@@ -24,19 +24,19 @@ class TestCalc:
         return '+','-','+'
     #тест калькулятора 10+10
     def testplus(self,plus):
-        assert lib.calc(plus) == [20]
+        assert lib.calc(*plus) == 20
     #тест калькулятора 10-10
     def testminus(self,minus):
-        assert lib.calc(minus) == [0]
+        assert lib.calc(*minus) == 0
     #тест калькулятора 10*10
     def testumnozhenine(self,umnozhenie):
-        assert lib.calc(umnozhenie) == [100]
+        assert lib.calc(*umnozhenie) == 100
     #тест калькулятора 10/10
     def testdelenie(self,delenie):
-        assert lib.calc(delenie) == [1]
+        assert lib.calc(*delenie) == 1
     #тест калькулятора с ошибкой
     def testerror(self,error):
-        assert lib.calc(error) == [0]
+        assert lib.calc(error) == 0
     #тест калькулятора с ошибкой TypeError исключая ошибку
     def testerrorwithpytest(self,error):
         with pytest.raises(TypeError):
